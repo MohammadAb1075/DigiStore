@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DigiStore.Models.ProductModel>
+
+<h1>@ViewData["Title"]</h1>
+@*<h1>@ViewData["Id"]</h1>*@
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ProductId)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductName)</th>
+            <th>@Html.DisplayNameFor(model => model.CategoryId)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                <td>@Html.DisplayFor(modelItem => item.CategoryId)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>
+                    <a href="/product/edit/@item.ProductId">Edit</a>
+                    @Html.ActionLink("Edit","Edit", new{ id = item.ProductId }) |
+                    @Html.ActionLink("DeleteType1","Delete", new { id = item.ProductId })
+                    <a href="/product/delete/@item.ProductId" onclick="return confirm('Are you sure to remove item?')">DeleteType2</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

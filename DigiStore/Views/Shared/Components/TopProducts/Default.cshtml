@@ -1,0 +1,15 @@
+﻿@model List<ProductModel>
+
+@{
+    Layout = null;
+}
+
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <h3>@item.ProductName</h3>
+            <p>Price: @item.Price</p>
+        </div>
+    }
+</div>
