@@ -17,7 +17,7 @@ namespace DigiStore.Utilities
 
         public SqlConnection Connection()
         {
-            string connectionString = _configuration.GetConnectionString("DBDigiStore");
+            string connectionString = _configuration.GetConnectionString("DigiStoreDB");
             return new SqlConnection(connectionString); 
         }
     }
