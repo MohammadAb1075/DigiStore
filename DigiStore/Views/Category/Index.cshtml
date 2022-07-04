@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Mvc.Routing
+@*@model IEnumerable<CategoryModel>*@
+@model PaginationModel<CategoryModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Data[0].CategoryId)</th>
+            <th>@Html.DisplayNameFor(model => model.Data[0].CategoryName)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.CategoryId)</td>
+                <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
+                <td>
+                    <a href="/category/edit/@item.CategoryId">Edit</a>
+                    @*@Html.ActionLink("DeleteType1","Delete", new { id = item.ProductId })*@
+                    <a href="/category/delete/@item.CategoryId" onclick="return confirm('Are you sure to remove item?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="width:100%;text-align:center;margin-top:5px;">
+    @{
+        IUrlHelper urlHelper = new UrlHelperFactory().GetUrlHelper(ViewContext);
+
+        TagBuilder result = new("div");
+        result.AddCssClass("dataTables_paginate paging_simple_numbers");
+        TagBuilder tag = new("a");
+        tag.Attributes["href"] = urlHelper.Action("Index", new { Page = Model.Page - 1 });
+        tag.AddCssClass(Model.Page <= 1 ? "paginate_button previous disabled" : "paginate_button previous");
+        result.InnerHtml.AppendHtml(tag);
+        for (int i = 1; i <= Model.Pages; i++)
+        {
+            tag = new("a");
+            tag.Attributes["href"] = urlHelper.Action("Index", new { Page = i });
+            tag.AddCssClass(i == Model.Page ? "paginate_button current" : "paginate_button");
+            tag.InnerHtml.Append(i.ToString());
+            result.InnerHtml.AppendHtml(tag);
+        }
+        tag = new("a");
+        tag.Attributes["href"] = urlHelper.Action("Index", new { Page = Model.Page + 1 });
+        tag.AddCssClass(Model.Page >= Model.Pages ? "paginate_button next disabled" : "paginate_button next");
+        result.InnerHtml.AppendHtml(tag);
+        Output.Write(result.InnerHtml);
+    }
+</div>

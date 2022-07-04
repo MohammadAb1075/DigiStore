@@ -9,7 +9,11 @@ namespace DigiStore.Helper
     {
         Task<List<CategoryModel>> GetAllAsync();
         Task<List<CategoryModel>> GetAllWithSPAsync();
+        Task<CategoryModel> GetByIdAsync(int id);
         Task<PaginationModel<CategoryModel>> GetWithPaginationAsync(int page = 1, int limit = 5);
+        Task AddWithSPAsync(CategoryModel model);
+        Task UpdateWithSPAsync(int id, CategoryModel model);
+        Task DeleteWithSPAsync(int id);
     }
     public class CategoryHelper : ICategoryHelper
     {
@@ -18,7 +22,7 @@ namespace DigiStore.Helper
         {
             _configuration = configuration;
         }
-        
+
         public async Task<List<CategoryModel>> GetAllAsync()
         {
             string connectionString = _configuration.GetConnectionString("DigiStoreDB");
@@ -29,7 +33,6 @@ namespace DigiStore.Helper
                 return result.ToList();
             }
         }
-         
         public async Task<List<CategoryModel>> GetAllWithSPAsync()
         {
             string connectionString = _configuration.GetConnectionString("DigiStoreDB");
@@ -40,7 +43,19 @@ namespace DigiStore.Helper
                 return result.ToList();
             }
         }
+        public async Task<CategoryModel> GetByIdAsync(int id)
+        {
+            string connectionString = _configuration.GetConnectionString("DigiStoreDB");
+            using (IDbConnection dbConnection = new SqlConnection(connectionString))
+            {
+                var query = "usp_CategoriesSelect";
+                var parameters = new DynamicParameters();
+                parameters.Add("CategoryId", id);
 
+                var result = await dbConnection.QuerySingleOrDefaultAsync<CategoryModel>(query, parameters, commandType: CommandType.StoredProcedure);
+                return result;
+            }
+        }
         public async Task<PaginationModel<CategoryModel>> GetWithPaginationAsync(int page = 1, int limit = 5)
         {
             var result = new PaginationModel<CategoryModel>();
@@ -67,5 +82,47 @@ namespace DigiStore.Helper
                 return result;
             }
         }
+        public async Task AddWithSPAsync(CategoryModel model)
+        {
+            string connectionString = _configuration.GetConnectionString("DigiStoreDB");
+            using (IDbConnection dappCon = new SqlConnection(connectionString))
+            {
+                var querySP = "usp_CategoriesInsert";
+
+                var parameters = new DynamicParameters();
+                //parameters.Add("CategoryId", model.CategoryId);
+                parameters.Add("CategoryName", model.CategoryName);
+
+                await dappCon.ExecuteAsync(querySP, parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+        public async Task UpdateWithSPAsync(int id, CategoryModel model)
+        {
+            
+            string connectionString = _configuration.GetConnectionString("DigiStoreDB");
+            using (IDbConnection dbConnection = new SqlConnection(connectionString))
+            {
+                var querySP = "usp_CategoriesUpdate";
+                var parameters = new DynamicParameters();
+                parameters.Add("CategoryId", id);
+                //parameters.Add("CategoryId", model.CategoryId);
+                parameters.Add("CategoryName", model.CategoryName);
+                await dbConnection.ExecuteAsync(querySP, parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+        public async Task DeleteWithSPAsync(int id)
+        {
+            string connectionString = _configuration.GetConnectionString("DigiStoreDB");
+            using (IDbConnection dappCon = new SqlConnection(connectionString))
+            {
+                var querySP = "usp_CategoriesDelete";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("CategoryId", id);
+
+                await dappCon.ExecuteAsync(querySP, parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
     }
 }

@@ -34,8 +34,17 @@ app.UseRouting();
 
 //app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute("default", "/{controller=Home}/{action=index}/{id?}");
+    //endpoints.MapControllerRoute("pagination", "/{controller=Category}/{action=index}/{category}/Page-{PageNumber}");
+    //endpoints.MapControllerRoute("pagination", "/{controller=Category}/{action=index}/Page-{PageNumber}");
+    //endpoints.MapControllerRoute("pagination", "/{controller=Category}/{action=index}/{category}");
+    endpoints.MapDefaultControllerRoute();
+});
 
 app.Run();
