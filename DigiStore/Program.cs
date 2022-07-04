@@ -1,8 +1,10 @@
+using DigiStore.Data;
 using DigiStore.Helper;
 using DigiStore.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<DigiStoreContext>();
 builder.Services.AddScoped<ISQLUtitily, SQLUtitily>();
 builder.Services.AddScoped<IProductHelper, ProductHelper>();
 builder.Services.AddScoped<ICategoryHelper, CategoryHelper>();

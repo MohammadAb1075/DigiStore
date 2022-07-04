@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DigiStore.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoryController : BaseController
     {
         ICategoryHelper _categoryHelper;
 
