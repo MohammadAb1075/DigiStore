@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiStore", "DIgiStore\DigiStore.csproj", "{B2921202-1FBD-4E6B-BAB1-D42460D77C59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiStore", "DIgiStore\DigiStore.csproj", "{B2921202-1FBD-4E6B-BAB1-D42460D77C59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{A7EDC3B7-E9D4-4436-BD14-A042EDBF52E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources", "Resources\Resources.csproj", "{A7EDC3B7-E9D4-4436-BD14-A042EDBF52E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

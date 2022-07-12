@@ -13,7 +13,7 @@ namespace DigiStore.Models
 
         [Display(Name = nameof(Titles.ProductName), ResourceType = typeof(Titles))]
         [Required(ErrorMessageResourceName = nameof(Messages.Required), ErrorMessageResourceType = typeof(Messages))]
-        [StringLength(128, MinimumLength = 16)]
+        [StringLength(64, MinimumLength = 3, ErrorMessageResourceName = nameof(Messages.StringLength), ErrorMessageResourceType = typeof(Messages))]
         public string ProductName { get; set; }
 
         [Display(Name = nameof(Titles.CategoryId), ResourceType = typeof(Titles))]
@@ -25,7 +25,8 @@ namespace DigiStore.Models
         [Range(1000, 10000)]
         public int Price { get; set; }
 
+        [Display(Name = nameof(Titles.Email), ResourceType = typeof(Titles))]
+        [EmailAddress]
         public string? Email { get; set; }
-
     }
 }

@@ -29,7 +29,7 @@ namespace Resources {
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        public Messages() {
+        internal Messages() {
         }
         
         /// <summary>
@@ -59,13 +59,31 @@ namespace Resources {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to فیلد {0} اجباری است.
+        ///   Looks up a localized string similar to Invalid Data.
+        /// </summary>
+        public static string InvalidData {
+            get {
+                return ResourceManager.GetString("InvalidData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field {0} is required.
         /// </summary>
         public static string Required {
             get {
                 return ResourceManager.GetString("Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field {0} must have length between {1} to {2}.
+        /// </summary>
+        public static string StringLength {
+            get {
+                return ResourceManager.GetString("StringLength", resourceCulture);
             }
         }
     }

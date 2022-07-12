@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidData" xml:space="preserve">
+    <value>Invalid Data</value>
+  </data>
   <data name="Required" xml:space="preserve">
-    <value>فیلد {0} اجباری است</value>
+    <value>Field {0} is required</value>
+  </data>
+  <data name="StringLength" xml:space="preserve">
+    <value>Field {0} must have length between {1} to {2}</value>
   </data>
 </root>

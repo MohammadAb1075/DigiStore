@@ -118,30 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CategoryId" xml:space="preserve">
-    <value>Category Id</value>
+    <value>کد گروه</value>
   </data>
   <data name="CategoryName" xml:space="preserve">
-    <value>Category Name</value>
+    <value>نام گروه</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Code</value>
+    <value>کد</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Create</value>
+    <value>جدید</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>ایمیل</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>خانه</value>
   </data>
   <data name="List" xml:space="preserve">
-    <value>List</value>
+    <value>لیست</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Price</value>
+    <value>قیمت</value>
   </data>
   <data name="ProductId" xml:space="preserve">
-    <value>Product Id</value>
+    <value>کد محصول</value>
   </data>
   <data name="ProductName" xml:space="preserve">
-    <value>Product Name</value>
+    <value>نام محصول</value>
   </data>
 </root>

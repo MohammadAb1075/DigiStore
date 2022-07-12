@@ -29,7 +29,7 @@ namespace Resources {
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        public Titles() {
+        internal Titles() {
         }
         
         /// <summary>
@@ -59,45 +59,81 @@ namespace Resources {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to کد گروه.
+        ///   Looks up a localized string similar to Category Id.
         /// </summary>
         public static string CategoryId {
             get {
                 return ResourceManager.GetString("CategoryId", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ایمیل.
+        ///   Looks up a localized string similar to Category Name.
+        /// </summary>
+        public static string CategoryName {
+            get {
+                return ResourceManager.GetString("CategoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to قیمت.
+        ///   Looks up a localized string similar to List.
+        /// </summary>
+        public static string List {
+            get {
+                return ResourceManager.GetString("List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
         /// </summary>
         public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to کد محصول.
+        ///   Looks up a localized string similar to Product Id.
         /// </summary>
         public static string ProductId {
             get {
                 return ResourceManager.GetString("ProductId", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to نام مجصول.
+        ///   Looks up a localized string similar to Product Name.
         /// </summary>
         public static string ProductName {
             get {

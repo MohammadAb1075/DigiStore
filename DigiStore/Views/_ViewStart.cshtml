@@ -1,3 +1,51 @@
-﻿@{
+﻿@*@{
     Layout = "_AdminLayout";
+}*@
+
+@{
+	//Layout = "Layouts/_Layout";
+
+	//var currentCultureName =
+	//	System.Threading.Thread.CurrentThread.CurrentUICulture.Name
+	//	.Substring(startIndex: 0, length: 2)
+	//	.ToLower()
+	//	;
+	//var currentCultureName =
+	//	System.Threading.Thread.CurrentThread
+	//	.CurrentUICulture.TwoLetterISOLanguageName;
+
+	var currentCultureName = ViewData["lang"];
+
+	switch (currentCultureName)
+	{
+		case "fa":
+		case "ar":
+		{
+			Layout =
+				"Layouts/RTL/_AdminLayout";
+
+			break;
+		}
+
+		default:
+		{
+			Layout =
+				"Layouts/LTR/_AdminLayout";
+			break;
+		}
+	}
 }
+
+
+@*
+@if (System.Threading.Thread.CurrentThread.CurrentUICulture.TextInfo.IsRightToLeft)
+{
+	Layout =
+		"Layouts/Rtl/_Layout";
+}
+else
+{
+	Layout =
+		"Layouts/Ltr/_Layout";
+}
+*@

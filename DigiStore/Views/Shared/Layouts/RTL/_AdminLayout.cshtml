@@ -1,16 +1,29 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    //var currentCultureName = System.Threading.Thread
+    //                    .CurrentThread.CurrentUICulture
+    //                    .TwoLetterISOLanguageName;
+    //var currentCultureName =
+    //	System.Threading.Thread
+    //	.CurrentThread.CurrentUICulture.Name;
+    var currentCultureName = ViewData["lang"];
+
+}
+<!DOCTYPE html>
+
+<html lang="@(currentCultureName)" dir="rtl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="/css/admin/zwicon.min.css">
-    <link rel="stylesheet" href="/css/admin/animate.min.css">
-    <link rel="stylesheet" href="/css/admin/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="/css/admin/main.min.css">
-    <link rel="stylesheet" href="/css/admin/main.min(1).css">
-    <!-- App styles -->
-    <link rel="stylesheet" href="/css/admin/app.min.css">
+
+	<partial name="PartialViews/_Seo" />
+
+	<partial name="PartialViews/_OpenGraph" />
+
+	<partial name="PartialViews/_FavoriteIcon" />
+
+	<partial name="PartialViews/RTL/_StyleSheets" />
+
 </head>
 
 <body data-sa-theme="1">
@@ -320,9 +333,13 @@
                 <li class="d-none d-sm-inline-block">
                     <a href="https://byrushan.com/projects/super-admin/app/2.2/index.html" class="top-nav__themes" data-sa-action="aside-open" data-sa-target=".themes"><i class="zwicon-palette"></i></a>
                 </li>
+                <li class="d-none d-sm-inline-block">
+                    <partial name="PartialViews/_ChangeCulture" />
+                </li>
+
             </ul>
 
-            <div class="clock d-none d-md-inline-block">
+            <div class="clock d-none d-md-inline-block" dir="ltr">
                 <div class="time">
                     <span class="time__hours"></span>
                     <span class="time__min"></span>
@@ -355,16 +372,16 @@
                     <li class="navigation__sub">
                         <a><i class="zwicon-three-h"></i>Categories</a>
                         <ul>
-                            <li><a href="/Category/Index">List</a></li>
-                            <li><a href="/Category/Create">Create</a></li>
+                            <li><a href="/@(currentCultureName)/Category/Index">@(Resources.Titles.List)</a></li>
+                            <li><a href="/@(currentCultureName)/Category/Create">@(Resources.Titles.Create)</a></li>
                         </ul>
                     </li>
 
                     <li class="navigation__sub">
                         <a><i class="zwicon-three-h"></i>Products</a>
                         <ul>
-                            <li><a href="/Product/Index">List</a></li>
-                            <li><a href="/Product/Create">Create</a></li>
+                            <li><a href="/@(currentCultureName)/Product/Index">@(Resources.Titles.List)</a></li>
+                            <li><a href="/@(currentCultureName)/Product/Create">@(Resources.Titles.Create)</a></li>
                         </ul>
                     </li>
                     

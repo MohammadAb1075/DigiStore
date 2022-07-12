@@ -14,6 +14,7 @@ namespace DigiStore.Controllers
         }
 
         #region Get
+        [HttpGet]
         public IActionResult Index(int page = 1)
         {
             @ViewData["Title"] = "Category List";
