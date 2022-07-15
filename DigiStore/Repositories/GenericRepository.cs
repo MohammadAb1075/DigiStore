@@ -38,9 +38,13 @@ namespace DigiStore.Repositories
             var item = await _dbContext.Set<T>().FindAsync(id);
             return item;
         }
-        public async Task<List<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync(int count)
         {
             var result = _dbContext.Set<T>();
+            if (count > 0)
+            {
+                result.Take(count);
+            }
             return await result.ToListAsync();
         }
         public async Task CommitAsync()

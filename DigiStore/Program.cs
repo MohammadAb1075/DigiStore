@@ -1,5 +1,7 @@
 using DigiStore.Data;
+using DigiStore.Entities;
 using DigiStore.Helper;
+using DigiStore.Repositories;
 using DigiStore.Utilities;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<DigiStoreContext>();
 builder.Services.AddScoped<ISQLUtitily, SQLUtitily>();
 builder.Services.AddScoped<IProductHelper, ProductHelper>();
 builder.Services.AddScoped<ICategoryHelper, CategoryHelper>();
+builder.Services.AddScoped<IGenericRepository<Products>, GenericRepository<Products>>();
 
 
 

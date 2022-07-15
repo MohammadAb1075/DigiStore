@@ -9,7 +9,7 @@ namespace DigiStore.Repositories
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
         Task<T> GetByIdAsync(int id);
-        Task<List<T>> GetAllAsync();
+        Task<List<T>> GetAllAsync(int count);
         Task CommitAsync();
 
         //Task<PaginationResult<T>> GetAsQueryable(Expression<Func<T, bool>> filter = null,
