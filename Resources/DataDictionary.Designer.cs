@@ -22,14 +22,14 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Titles {
+    public class DataDictionary {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Titles() {
+        internal DataDictionary() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.Titles", typeof(Titles).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.DataDictionary", typeof(DataDictionary).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +61,110 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to Category Id.
         /// </summary>
-        public static string About {
+        public static string CategoryId {
             get {
-                return ResourceManager.GetString("About", resourceCulture);
+                return ResourceManager.GetString("CategoryId", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create New Category.
+        ///   Looks up a localized string similar to CategoryModel.
         /// </summary>
-        public static string CategoryCreate {
+        public static string CategoryModel {
             get {
-                return ResourceManager.GetString("CategoryCreate", resourceCulture);
+                return ResourceManager.GetString("CategoryModel", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit Category.
+        ///   Looks up a localized string similar to Category Name.
         /// </summary>
-        public static string CategoryEdit {
+        public static string CategoryName {
             get {
-                return ResourceManager.GetString("CategoryEdit", resourceCulture);
+                return ResourceManager.GetString("CategoryName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to List of Categories.
+        ///   Looks up a localized string similar to Code.
         /// </summary>
-        public static string CategoryIndex {
+        public static string Code {
             get {
-                return ResourceManager.GetString("CategoryIndex", resourceCulture);
+                return ResourceManager.GetString("Code", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact.
+        ///   Looks up a localized string similar to Create.
         /// </summary>
-        public static string Contact {
+        public static string Create {
             get {
-                return ResourceManager.GetString("Contact", resourceCulture);
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DigiStore Home.
+        ///   Looks up a localized string similar to Are you sure to remove item?.
         /// </summary>
-        public static string Index {
+        public static string DeleteConfirm {
             get {
-                return ResourceManager.GetString("Index", resourceCulture);
+                return ResourceManager.GetString("DeleteConfirm", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create New Product.
+        ///   Looks up a localized string similar to Email.
         /// </summary>
-        public static string ProductCreate {
+        public static string Email {
             get {
-                return ResourceManager.GetString("ProductCreate", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit Product.
+        ///   Looks up a localized string similar to List.
         /// </summary>
-        public static string ProductEdit {
+        public static string List {
             get {
-                return ResourceManager.GetString("ProductEdit", resourceCulture);
+                return ResourceManager.GetString("List", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to List of Products.
+        ///   Looks up a localized string similar to Price.
         /// </summary>
-        public static string ProductIndex {
+        public static string Price {
             get {
-                return ResourceManager.GetString("ProductIndex", resourceCulture);
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Id.
+        /// </summary>
+        public static string ProductId {
+            get {
+                return ResourceManager.GetString("ProductId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ProductModel.
+        /// </summary>
+        public static string ProductModel {
+            get {
+                return ResourceManager.GetString("ProductModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Name.
+        /// </summary>
+        public static string ProductName {
+            get {
+                return ResourceManager.GetString("ProductName", resourceCulture);
             }
         }
     }

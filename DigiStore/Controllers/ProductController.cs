@@ -81,7 +81,7 @@ namespace DigiStore.Controllers
         {
             _logger.LogInformation($"Show Product List With Browser : {Request.Headers["User_Agent"]}");
             //_logger.LogInformation($"Show Product List With Browser : {Request.Headers.UserAgent}");
-            ViewData["Title"] = "ViewData Product List";
+            ViewData["Title"] = Resources.Titles.ProductIndex;
             var result = _dbContext.Products.Select(q => new Products
             {
                 ProductId = q.ProductId,

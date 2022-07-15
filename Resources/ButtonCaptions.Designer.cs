@@ -22,14 +22,14 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Titles {
+    public class ButtonCaptions {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Titles() {
+        internal ButtonCaptions() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.Titles", typeof(Titles).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.ButtonCaptions", typeof(ButtonCaptions).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +61,74 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to Back.
         /// </summary>
-        public static string About {
+        public static string Back {
             get {
-                return ResourceManager.GetString("About", resourceCulture);
+                return ResourceManager.GetString("Back", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create New Category.
+        ///   Looks up a localized string similar to Back to List.
         /// </summary>
-        public static string CategoryCreate {
+        public static string BackToList {
             get {
-                return ResourceManager.GetString("CategoryCreate", resourceCulture);
+                return ResourceManager.GetString("BackToList", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit Category.
+        ///   Looks up a localized string similar to Create.
         /// </summary>
-        public static string CategoryEdit {
+        public static string Create {
             get {
-                return ResourceManager.GetString("CategoryEdit", resourceCulture);
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to List of Categories.
+        ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string CategoryIndex {
+        public static string Delete {
             get {
-                return ResourceManager.GetString("CategoryIndex", resourceCulture);
+                return ResourceManager.GetString("Delete", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact.
+        ///   Looks up a localized string similar to Edit.
         /// </summary>
-        public static string Contact {
+        public static string Edit {
             get {
-                return ResourceManager.GetString("Contact", resourceCulture);
+                return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DigiStore Home.
+        ///   Looks up a localized string similar to Reset.
         /// </summary>
-        public static string Index {
+        public static string Reset {
             get {
-                return ResourceManager.GetString("Index", resourceCulture);
+                return ResourceManager.GetString("Reset", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create New Product.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string ProductCreate {
+        public static string Save {
             get {
-                return ResourceManager.GetString("ProductCreate", resourceCulture);
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit Product.
+        ///   Looks up a localized string similar to Update.
         /// </summary>
-        public static string ProductEdit {
+        public static string Update {
             get {
-                return ResourceManager.GetString("ProductEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to List of Products.
-        /// </summary>
-        public static string ProductIndex {
-            get {
-                return ResourceManager.GetString("ProductIndex", resourceCulture);
+                return ResourceManager.GetString("Update", resourceCulture);
             }
         }
     }

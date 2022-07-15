@@ -1,11 +1,12 @@
 ﻿@model DigiStore.Models.ProductModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = Resources.Titles.ProductEdit;
 }
 
-<h1>Edit</h1>
-<h4>Product Model</h4>
+<h1>@(Resources.Titles.ProductEdit)</h1>
+<h4>@(Resources.DataDictionary.ProductModel)</h4>
+
 
 <hr />
 
@@ -14,32 +15,32 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <input asp-for="ProductId" class="form-control" />
-                <span asp-validation-for="ProductId" class="text-danger"></span>
+                <label asp-for="@(Resources.DataDictionary.ProductId)" class="control-label">@(Resources.DataDictionary.ProductId)</label>
+                <input asp-for="@(Resources.DataDictionary.ProductId)" class="form-control" />
+                <span asp-validation-for="@(Resources.DataDictionary.ProductId)" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
+                <label asp-for="@(Resources.DataDictionary.ProductName)" class="control-label">@(Resources.DataDictionary.ProductName)</label>
+                <input asp-for="@(Resources.DataDictionary.ProductName)" class="form-control" />
+                <span asp-validation-for="@(Resources.DataDictionary.ProductName)" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
+                <label asp-for="@(Resources.DataDictionary.CategoryId)" class="control-label">@(Resources.DataDictionary.CategoryId)</label>
                 @*<input asp-for="CategoryId" class="form-control" />*@
-                <select class="form-control" asp-for="CategoryId" asp-items="@(new SelectList((List<CategoryModel>)ViewData["Categories"],"CategoryId","CategoryName"))"></select>
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                <select class="form-control" asp-for="@(Resources.DataDictionary.CategoryId)" asp-items="@(new SelectList((List<CategoryModel>)ViewData["Categories"],"CategoryId","CategoryName"))"></select>
+                <span asp-validation-for="@(Resources.DataDictionary.CategoryId)" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="@(Resources.DataDictionary.Price)" class="control-label">@(Resources.DataDictionary.Price)</label>
+                <input asp-for="@(Resources.DataDictionary.Price)" class="form-control" />
+                <span asp-validation-for="@(Resources.DataDictionary.Price)" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@(Resources.ButtonCaptions.Save)" class="btn btn-primary" />
             </div>
 
         </form>
@@ -47,5 +48,5 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back To List</a>
+    <a asp-action="Index">@(Resources.ButtonCaptions.BackToList)</a>
 </div>

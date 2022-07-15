@@ -117,34 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CategoryId" xml:space="preserve">
-    <value>کد گروه</value>
+  <data name="About" xml:space="preserve">
+    <value>درباره ما</value>
   </data>
-  <data name="CategoryName" xml:space="preserve">
-    <value>نام گروه</value>
+  <data name="CategoryCreate" xml:space="preserve">
+    <value>ایجاد دسته جدید</value>
   </data>
-  <data name="Code" xml:space="preserve">
-    <value>کد</value>
+  <data name="CategoryEdit" xml:space="preserve">
+    <value>ویرایش دسته</value>
   </data>
-  <data name="Create" xml:space="preserve">
-    <value>جدید</value>
+  <data name="CategoryIndex" xml:space="preserve">
+    <value>لیست دسته ها</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>ایمیل</value>
+  <data name="Contact" xml:space="preserve">
+    <value>تماس با ما</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>خانه</value>
+  <data name="Index" xml:space="preserve">
+    <value>صفحه نخست فروشگاه</value>
   </data>
-  <data name="List" xml:space="preserve">
-    <value>لیست</value>
+  <data name="ProductCreate" xml:space="preserve">
+    <value>ایجاد محصول جدید</value>
   </data>
-  <data name="Price" xml:space="preserve">
-    <value>قیمت</value>
+  <data name="ProductEdit" xml:space="preserve">
+    <value>ویرایش محصول</value>
   </data>
-  <data name="ProductId" xml:space="preserve">
-    <value>کد محصول</value>
-  </data>
-  <data name="ProductName" xml:space="preserve">
-    <value>نام محصول</value>
+  <data name="ProductIndex" xml:space="preserve">
+    <value>لیست محصولات</value>
   </data>
 </root>

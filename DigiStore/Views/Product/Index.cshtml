@@ -6,7 +6,7 @@
 @*<h1>@ViewData["Id"]</h1>*@
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">@(Resources.ButtonCaptions.Create)</a>
 </p>
 
 <table class="table">
@@ -28,10 +28,12 @@
                 <td>@Html.DisplayFor(modelItem => item.CategoryId)</td>
                 <td>@Html.DisplayFor(modelItem => item.Price)</td>
                 <td>
-                    <a href="/product/edit/@item.ProductId">Edit</a>
-                    @Html.ActionLink("Edit","Edit", new{ id = item.ProductId }) |
-                    @Html.ActionLink("DeleteType1","Delete", new { id = item.ProductId })
-                    <a href="/product/delete/@item.ProductId" onclick="return confirm('Are you sure to remove item?')">DeleteType2</a>
+                    <a href="/product/edit/@item.ProductId">@(Resources.ButtonCaptions.Edit) V1</a>
+                    @*@Html.ActionLink("Edit","Edit", new{ id = item.ProductId }) |*@
+                    @Html.ActionLink(Resources.ButtonCaptions.Edit + " V2", "Edit", new{ id = item.ProductId }) |
+                    @Html.ActionLink(Resources.ButtonCaptions.Delete + " V1","Delete", new { id = item.ProductId })
+                    @*@Html.ActionLink("DeleteType1","Delete", new { id = item.ProductId })*@
+                    <a href="/product/delete/@item.ProductId" onclick="return confirm(@(Resources.DataDictionary.DeleteConfirm))">@(Resources.ButtonCaptions.Delete) V2</a>
                 </td>
             </tr>
         }

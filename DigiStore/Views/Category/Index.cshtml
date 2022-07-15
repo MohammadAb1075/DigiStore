@@ -5,7 +5,7 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">@(Resources.ButtonCaptions.Create)</a>
 </p>
 
 <table class="table">
@@ -23,16 +23,16 @@
                 <td>@Html.DisplayFor(modelItem => item.CategoryId)</td>
                 <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
                 <td>
-                    <a href="/category/edit/@item.CategoryId">Edit</a>
+                    <a href="/category/edit/@item.CategoryId">@(Resources.ButtonCaptions.Edit)</a>
                     @*@Html.ActionLink("DeleteType1","Delete", new { id = item.ProductId })*@
-                    <a href="/category/delete/@item.CategoryId" onclick="return confirm('Are you sure to remove item?')">Delete</a>
+                    <a href="/category/delete/@item.CategoryId" onclick="return confirm(@(Resources.DataDictionary.DeleteConfirm))">@(Resources.ButtonCaptions.Delete)</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<div style="width:100%;text-align:center;margin-top:5px;">
+<div style="width:100%;text-align:center;margin-top:5px;" dir="ltr">
     @{
         IUrlHelper urlHelper = new UrlHelperFactory().GetUrlHelper(ViewContext);
 

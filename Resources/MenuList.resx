@@ -117,31 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
+  <data name="Calendar" xml:space="preserve">
+    <value>Calendar</value>
   </data>
-  <data name="CategoryCreate" xml:space="preserve">
-    <value>Create New Category</value>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
   </data>
-  <data name="CategoryEdit" xml:space="preserve">
-    <value>Edit Category</value>
+  <data name="Charts" xml:space="preserve">
+    <value>Charts</value>
   </data>
-  <data name="CategoryIndex" xml:space="preserve">
-    <value>List of Categories</value>
+  <data name="DataTable" xml:space="preserve">
+    <value>Data Table</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+  <data name="Forms" xml:space="preserve">
+    <value>Forms</value>
   </data>
-  <data name="Index" xml:space="preserve">
-    <value>DigiStore Home</value>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="ProductCreate" xml:space="preserve">
-    <value>Create New Product</value>
+  <data name="HTMLTable" xml:space="preserve">
+    <value>HTML Table</value>
   </data>
-  <data name="ProductEdit" xml:space="preserve">
-    <value>Edit Product</value>
+  <data name="JavascriptComponents" xml:space="preserve">
+    <value>Javascript Components</value>
   </data>
-  <data name="ProductIndex" xml:space="preserve">
-    <value>List of Products</value>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>Photo Gallery</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="SamplePages" xml:space="preserve">
+    <value>Sample Pages</value>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="Typography" xml:space="preserve">
+    <value>Typography</value>
+  </data>
+  <data name="UserInterface" xml:space="preserve">
+    <value>User Interface</value>
+  </data>
+  <data name="Widgets" xml:space="preserve">
+    <value>Widgets</value>
   </data>
 </root>

@@ -117,31 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
+  <data name="Back" xml:space="preserve">
+    <value>بازگشت</value>
   </data>
-  <data name="CategoryCreate" xml:space="preserve">
-    <value>Create New Category</value>
+  <data name="BackToList" xml:space="preserve">
+    <value>بازگشت به فهرست</value>
   </data>
-  <data name="CategoryEdit" xml:space="preserve">
-    <value>Edit Category</value>
+  <data name="Create" xml:space="preserve">
+    <value>ایجاد</value>
   </data>
-  <data name="CategoryIndex" xml:space="preserve">
-    <value>List of Categories</value>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
   </data>
-  <data name="Index" xml:space="preserve">
-    <value>DigiStore Home</value>
+  <data name="Reset" xml:space="preserve">
+    <value>حالت اولیه</value>
   </data>
-  <data name="ProductCreate" xml:space="preserve">
-    <value>Create New Product</value>
+  <data name="Save" xml:space="preserve">
+    <value>ذخیره</value>
   </data>
-  <data name="ProductEdit" xml:space="preserve">
-    <value>Edit Product</value>
-  </data>
-  <data name="ProductIndex" xml:space="preserve">
-    <value>List of Products</value>
+  <data name="Update" xml:space="preserve">
+    <value>ویرایش</value>
   </data>
 </root>

@@ -117,31 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
+  <data name="CategoryId" xml:space="preserve">
+    <value>کد گروه</value>
   </data>
-  <data name="CategoryCreate" xml:space="preserve">
-    <value>Create New Category</value>
+  <data name="CategoryModel" xml:space="preserve">
+    <value>مدل دسته ها</value>
   </data>
-  <data name="CategoryEdit" xml:space="preserve">
-    <value>Edit Category</value>
+  <data name="CategoryName" xml:space="preserve">
+    <value>نام گروه</value>
   </data>
-  <data name="CategoryIndex" xml:space="preserve">
-    <value>List of Categories</value>
+  <data name="Code" xml:space="preserve">
+    <value>کد</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+  <data name="Create" xml:space="preserve">
+    <value>جدید</value>
   </data>
-  <data name="Index" xml:space="preserve">
-    <value>DigiStore Home</value>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>آیا از حذف آیتم اطمینان دارید?</value>
   </data>
-  <data name="ProductCreate" xml:space="preserve">
-    <value>Create New Product</value>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
   </data>
-  <data name="ProductEdit" xml:space="preserve">
-    <value>Edit Product</value>
+  <data name="Home" xml:space="preserve">
+    <value>خانه</value>
   </data>
-  <data name="ProductIndex" xml:space="preserve">
-    <value>List of Products</value>
+  <data name="List" xml:space="preserve">
+    <value>لیست</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>قیمت</value>
+  </data>
+  <data name="ProductId" xml:space="preserve">
+    <value>کد محصول</value>
+  </data>
+  <data name="ProductModel" xml:space="preserve">
+    <value>مدل محصولات</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>نام محصول</value>
   </data>
 </root>

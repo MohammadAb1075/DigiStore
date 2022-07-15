@@ -17,7 +17,7 @@ namespace DigiStore.Controllers
         [HttpGet]
         public IActionResult Index(int page = 1)
         {
-            @ViewData["Title"] = "Category List";
+            ViewData["Title"] = Resources.Titles.CategoryIndex;
             var result = _categoryHelper.GetWithPaginationAsync(page).Result;
             return View(result);
         }
@@ -50,7 +50,7 @@ namespace DigiStore.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            @ViewData["Title"] = "Edit Category";
+            @ViewData["Title"] = Resources.Titles.CategoryEdit;
             var model = await _categoryHelper.GetByIdAsync(id);
             return View(model);
         }
