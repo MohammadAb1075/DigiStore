@@ -20,17 +20,37 @@
 	//	.ToLower()
 	//	;
 
-	var currentCultureName =
-		System.Threading.Thread.CurrentThread
-		.CurrentUICulture.TwoLetterISOLanguageName;
+	//var currentCultureName =
+	//	System.Threading.Thread.CurrentThread
+	//	.CurrentUICulture.TwoLetterISOLanguageName;
 
+	
+	string currentCultureName = (string)ViewData["lang"];
+	if (string.IsNullOrWhiteSpace(currentCultureName))
+	{
+		currentCultureName = "fa";
+	}
+	string? path = @Context?.Request?.Path.Value;
+	var host = @Context?.Request?.Host;
+	string? culture = null;
+	if (!string.IsNullOrWhiteSpace(path) && path != "/")
+	{
+		culture = path?.Substring(1, 2);
+	}
 }
-
-
+	
+	
 	<span class="d-flex">
 	@if (currentCultureName != "fa")
 	{
-	<a href="/ChangeCulture?name=fa" class="nav-link text-white">
+		@*	<a href="/ChangeCulture?name=fa" class="nav-link text-white">*@
+
+			path = $"/fa/Home/Index/";
+
+
+	<a href="@(path)" class="nav-link text-white">
+
+
 	فارسی
 	<span class="flag-icon flag-icon-ir"></span>
 	</a>
@@ -38,7 +58,12 @@
 
 	@if (currentCultureName != "en")
 	{
-	<a href="/ChangeCulture?name=en" class="nav-link text-white">
+			path = $"/en/Home/Index/";
+
+
+	@*<a href="/ChangeCulture?name=en" class="nav-link text-white">*@
+	<a href="@(path)" class="nav-link text-white">
+
 	English
 	<span class="flag-icon flag-icon-us"></span>
 	</a>
