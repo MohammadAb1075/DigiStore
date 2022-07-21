@@ -1,11 +1,8 @@
 ﻿@{
-    //var currentCultureName = System.Threading.Thread
-    //                    .CurrentThread.CurrentUICulture
-    //                    .TwoLetterISOLanguageName;
-    //var currentCultureName =
-    //	System.Threading.Thread
-    //	.CurrentThread.CurrentUICulture.Name;
-    var currentCultureName = ViewData["lang"];
+    var currentCultureName = System.Threading.Thread
+                        .CurrentThread.CurrentUICulture
+                        .TwoLetterISOLanguageName;
+    //var currentCultureName = ViewData["lang"];
 
 }
 
@@ -33,16 +30,18 @@
             <li class="navigation__sub">
                 <a><i class="zwicon-three-h"></i>@(Resources.MenuList.Categories)</a>
                 <ul>
-                    <li><a href="/@(currentCultureName)/Category/Index">@(Resources.DataDictionary.List)</a></li>
-                    <li><a href="/@(currentCultureName)/Category/Create">@(Resources.DataDictionary.Create)</a></li>
+@*                    <li><a href="/@(currentCultureName)/Category/Index">@(Resources.DataDictionary.List)</a></li>
+                    <li><a href="/@(currentCultureName)/Category/Create">@(Resources.DataDictionary.Create)</a></li>*@
+                    <li><a href="/Category/Index">@(Resources.DataDictionary.List)</a></li>
+                    <li><a href="/Category/Create">@(Resources.DataDictionary.Create)</a></li>
                 </ul>
             </li>
 
             <li class="navigation__sub">
                 <a><i class="zwicon-three-h"></i>@(Resources.MenuList.Products)</a>
                 <ul>
-                    <li><a href="/@(currentCultureName)/Product/Index">@(Resources.DataDictionary.List)</a></li>
-                    <li><a href="/@(currentCultureName)/Product/Create">@(Resources.DataDictionary.Create)</a></li>
+                    <li><a href="/Product/Index">@(Resources.DataDictionary.List)</a></li>
+                    <li><a href="/Product/Create">@(Resources.DataDictionary.Create)</a></li>
                 </ul>
             </li>
                     

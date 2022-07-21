@@ -84,8 +84,9 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseRequestLocalization(opts);
 
-
-
+// UseCultureCookie() -> using Infrastructure.Middlewares;
+//app.UseCultureCookie();
+app.UseMiddleware<Infrastructure.Middlewares.CultureCookieHandlerMiddleware>();
 
 //app.UseHttpsRedirection();
 //app.UseStaticFiles();

@@ -10,11 +10,11 @@
 	//	.Substring(startIndex: 0, length: 2)
 	//	.ToLower()
 	//	;
-	//var currentCultureName =
-	//	System.Threading.Thread.CurrentThread
-	//	.CurrentUICulture.TwoLetterISOLanguageName;
+	var currentCultureName =
+		System.Threading.Thread.CurrentThread
+		.CurrentUICulture.TwoLetterISOLanguageName;
 
-	var currentCultureName = ViewData["lang"];
+	//var currentCultureName = ViewData["lang"];
 
 	switch (currentCultureName)
 	{
